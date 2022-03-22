@@ -1,8 +1,13 @@
 package com.github.fabriciolfj.domain.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Getter
+@Setter
 public class Limit {
 
     private String code;
@@ -11,29 +16,5 @@ public class Limit {
 
     public Limit() {
         this.code = UUID.randomUUID().toString();
-    }
-
-    public void setWithdraw(Integer withdraw) {
-        this.withdraw = withdraw;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setRate(BigDecimal rate) {
-        this.rate = rate;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public Integer getWithdraw() {
-        return withdraw;
-    }
-
-    public BigDecimal getRate() {
-        return rate;
     }
 }

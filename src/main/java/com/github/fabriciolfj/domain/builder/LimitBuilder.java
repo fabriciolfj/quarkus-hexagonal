@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.domain.service;
+package com.github.fabriciolfj.domain.builder;
 
 import com.github.fabriciolfj.domain.entity.Limit;
 

@@ -3,7 +3,7 @@ package com.github.fabriciolfj.domain.vo;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Extract {
+public class ExtractVO {
 
     private BigDecimal entrance;
     private BigDecimal exit;
@@ -11,7 +11,7 @@ public class Extract {
     private String description;
     private BigDecimal balance;
 
-    private Extract(final BigDecimal value) {
+    private ExtractVO(final BigDecimal value) {
         this.entrance = value;
         this.exit = BigDecimal.ZERO;
         this.movimentDate = LocalDateTime.now();
@@ -19,7 +19,7 @@ public class Extract {
         this.balance = value;
     }
 
-    public static final Extract init(final BigDecimal value) {
-        return new Extract(value);
+    public static final ExtractVO init(final BigDecimal value) {
+        return new ExtractVO(value);
     }
 }
