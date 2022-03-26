@@ -1,6 +1,5 @@
 package com.github.fabriciolfj.domain.vo;
 
-import com.github.fabriciolfj.domain.entity.Account;
 import com.github.fabriciolfj.domain.entity.Limit;
 import lombok.Getter;
 
@@ -15,10 +14,10 @@ public class AccountLimitUseVO {
     private Integer withdraw;
     private BigDecimal rate;
 
-    public AccountLimitUseVO(final Limit limit, final Account account, final Integer withdraw, final BigDecimal rate) {
+    public AccountLimitUseVO(final Limit limit) {
         this.code = UUID.randomUUID().toString();
         this.limit = limit;
-        this.withdraw = withdraw;
-        this.rate = rate;
+        this.withdraw = limit.getWithdraw();
+        this.rate = limit.getRate();
     }
 }

@@ -19,8 +19,9 @@ public class Account {
     private List<ExtractVO> extractVOS;
     private AccountLimitUseVO limitUse;
 
-    public Account(final BigDecimal balance) {
+    public Account(final BigDecimal balance, final Limit limit) {
         this.code = UUID.randomUUID().toString();
         this.extractVOS = Arrays.asList(ExtractVO.init(balance));
+        this.limitUse = new AccountLimitUseVO(limit);
     }
 }
