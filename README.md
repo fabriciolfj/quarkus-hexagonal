@@ -39,7 +39,7 @@
 - Podemos classificar as regras de negócio como políticas ou especificações, conforme detalhado abaixo.
 
 #### Policy (políticas)
-- Realiza alguma ação ou procedimento sobre o dado. Por exemplo: o documento da pessoa precisa ser transformado em um formato ou validar a entrada de algum dado.
+- Realiza alguma ação ou procedimento sobre o dado. Por exemplo: o documento da pessoa precisa ser transformado em um formato.
 
 #### Especificações
 - São condições para garantir um objeto válido
