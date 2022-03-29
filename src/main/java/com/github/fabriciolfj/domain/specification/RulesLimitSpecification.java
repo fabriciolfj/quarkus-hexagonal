@@ -6,24 +6,16 @@ import java.math.BigDecimal;
 
 public abstract class RulesLimitSpecification {
 
-    protected BigDecimal balance;
-    protected RulesLimitSpecification next;
-
-    public RulesLimitSpecification() {
-        setBalance();
-        setNext();
-    }
-
     public Limit createLimit(final BigDecimal value) {
-        if (this.balance.compareTo(value) >= 0) {
+        if (this.getBalance().compareTo(value) >= 0) {
             return createLimit();
         }
 
-        return next.createLimit();
+        return getNext().createLimit();
 
     }
 
     protected abstract Limit createLimit();
-    protected abstract void setBalance();
-    protected abstract void setNext();
+    protected abstract BigDecimal getBalance();
+    protected abstract RulesLimitSpecification getNext();
 }

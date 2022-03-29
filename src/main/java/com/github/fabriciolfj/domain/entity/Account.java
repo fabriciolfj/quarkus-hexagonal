@@ -21,7 +21,16 @@ public class Account {
 
     public Account(final BigDecimal balance, final Limit limit) {
         this.code = UUID.randomUUID().toString();
+        this.balance = balance;
         this.extractVOS = Arrays.asList(ExtractVO.init(balance));
         this.limitUse = new AccountLimitUseVO(limit);
+    }
+
+    public BigDecimal getRate() {
+        return this.limitUse.getRate();
+    }
+
+    public Integer getWithdraw() {
+        return limitUse.getWithdraw();
     }
 }

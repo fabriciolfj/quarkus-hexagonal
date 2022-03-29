@@ -10,13 +10,11 @@ import java.util.UUID;
 public class AccountLimitUseVO {
 
     private String code;
-    private Limit limit;
     private Integer withdraw;
     private BigDecimal rate;
 
     public AccountLimitUseVO(final Limit limit) {
         this.code = UUID.randomUUID().toString();
-        this.limit = limit;
         this.withdraw = limit.getWithdraw();
         this.rate = limit.getRate();
     }

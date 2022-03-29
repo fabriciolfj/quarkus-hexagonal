@@ -11,10 +11,8 @@ import java.math.BigDecimal;
 @RequiredArgsConstructor
 public class LimiteCreateService {
 
-    private final PremiumRole premiumRole;
-
     public Limit execute(final BigDecimal balance) {
-        var limite = premiumRole.createLimit(balance);
+        var limite = new PremiumRole().createLimit(balance);
         return limite;
     }
 }
